@@ -1,0 +1,17 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="dubbo-xml-consumer"/>
+
+    <dubbo:registry group="demo" address="zookeeper://localhost:2181" check="false" subscribe="true" register="false" />
+
+    <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
+    <!-- version 版本号必须和服务提供者版本号对应 -->
+    <!--interface 引入服务提供者对外暴露的接口  -->
+    <!--url:服务消费者直接服务提供者，服务提供者地址  -->
+    <dubbo:reference id="helloService" check="false" interface="com.wyb.api.HelloService"/>
+
+</beans>
