@@ -9,6 +9,6 @@ public class HelloServiceImpl implements HelloService {
 
     @Override
     public String hello(String message) {
-        return "hello" + message;
+        return "hello_" + message;
     }
 }

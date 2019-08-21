@@ -6,10 +6,9 @@
 
     <dubbo:application name="dubbo-xml-provider"/>
 
-    <!--localhost 开发过程中发现这里写127.0.0.1无效-->
-    <dubbo:registry address="zookeeper://localhost:2181"/>
+    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 
-    <dubbo:protocol name="dubbo" port="20890"/>
+    <dubbo:protocol name="dubbo" />
 
     <bean id="helloService" class="com.wyb.service.HelloServiceImpl"/>
 
