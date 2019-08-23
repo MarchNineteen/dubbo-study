@@ -10,7 +10,7 @@
 
     <dubbo:protocol name="dubbo" />
 
-    <bean id="helloService" class="com.wyb.service.HelloServiceImpl"/>
+    <bean id="helloService" class="com.wyb.service.impl.HelloServiceImpl"/>
 
     <dubbo:service interface="com.wyb.api.HelloService" ref="helloService"/>
 </beans>

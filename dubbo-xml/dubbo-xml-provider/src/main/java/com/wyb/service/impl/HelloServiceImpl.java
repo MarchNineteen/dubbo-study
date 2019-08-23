@@ -1,4 +1,4 @@
-package com.wyb.service;
+package com.wyb.service.impl;
 
 import com.wyb.api.HelloService;
 
